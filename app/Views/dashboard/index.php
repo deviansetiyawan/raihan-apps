@@ -1,292 +1,45 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= esc($title) ?></title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        :root {
-            --bg-page: #ececf2;
-            --line: #d9dde8;
-            --panel: #ffffff;
-            --text: #1f2e4a;
-            --brand-1: #0c3f86;
-            --brand-2: #1f5fb5;
-            --brand-3: #3c80d7;
-            --green-1: #00aa58;
-            --green-2: #00763e;
-            --red-1: #ff1734;
-            --red-2: #d60925;
-            --blue-1: #1e79d6;
-            --blue-2: #175eb0;
-        }
+﻿<?= $this->extend('layouts/app_shell') ?>
 
-        * { box-sizing: border-box; }
-        body {
-            margin: 0;
-            background: linear-gradient(180deg, #f4f5f9 0%, var(--bg-page) 100%);
-            color: var(--text);
-            font-family: 'Montserrat', sans-serif;
-        }
+<?= $this->section('head') ?>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    .toolbar { display:flex; justify-content:space-between; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+    .search-form { min-width: 330px; }
+    .search-form .input-group-text { background:#1f67c2; color:#fff; border-color:#1f67c2; font-weight:700; }
+    .toolbar .btn { border-radius: 8px; font-weight: 700; }
 
-        .dashboard-wrap {
-            max-width: 1080px;
-            margin: 18px auto;
-            border: 1px solid var(--line);
-            background: var(--panel);
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 12px 30px rgba(13, 30, 66, 0.12);
-        }
+    .kpi-card { border-radius: 10px; overflow: hidden; color: #fff; min-height: 120px; border: 1px solid rgba(255,255,255,.25); box-shadow: inset 0 1px 0 rgba(255,255,255,.18); }
+    .kpi-head { text-align:center; padding:10px 12px; font-size:.95rem; font-weight:700; border-bottom:1px solid rgba(255,255,255,.2); text-transform: uppercase; }
+    .kpi-body { min-height: 76px; display:flex; align-items:center; justify-content:center; gap:10px; font-size:2.4rem; font-weight:800; line-height:1; }
+    .kpi-total { background: linear-gradient(180deg, #1f79d7, #185db1); }
+    .kpi-active { background: linear-gradient(180deg, #00aa58, #007740); }
+    .kpi-inactive { background: linear-gradient(180deg, #ff1734, #d90a29); }
+    .status-icon { width: 36px; height: 36px; border-radius: 999px; display:inline-flex; align-items:center; justify-content:center; background:#fff; color:#0a8f4b; font-size:1.2rem; font-weight:800; }
+    .status-icon.red { color: #d92639; }
 
-        .hero {
-            background: linear-gradient(90deg, #123f7f 0%, #1b5cb0 55%, #3f88df 100%);
-            color: #fff;
-            padding: 18px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    .filters { margin: 13px 0 12px; padding: 10px 0; border-top: 1px solid #e7ebf4; border-bottom: 1px solid #e7ebf4; }
+    .filters .form-select { border-color:#ccd4e4; color:#3d4d67; font-weight:600; font-size:.9rem; }
 
-        .hero h1 {
-            margin: 0;
-            font-size: 2rem;
-            line-height: 1.15;
-            font-weight: 800;
-            letter-spacing: .6px;
-            text-transform: uppercase;
-        }
+    .chart-card { border:1px solid #e2e6f0; border-radius:6px; padding:12px; min-height:290px; background:#fff; }
+    .chart-card h3 { margin: 0 0 10px; text-align:center; font-size:1.2rem; font-weight:700; color:#2e3f5e; }
 
-        .logo-pgn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    .table-title { margin-top: 14px; background: linear-gradient(90deg, #0d4a9a, #2370cb); color:#fff; padding: 10px 14px; border-radius: 8px 8px 0 0; font-size: 1.05rem; font-weight: 700; }
+    .doc-table { border:1px solid #e3e7f1; border-top: 0; border-radius: 0 0 8px 8px; overflow: hidden; }
+    .doc-table thead th { font-size:.86rem; font-weight:700; color:#334362; background:#f7f9fd; white-space: nowrap; }
+    .doc-table tbody td { font-size:.84rem; color:#2f3f60; vertical-align: middle; }
+    .badge-state { padding:6px 10px; font-size:.74rem; font-weight:700; border-radius:6px; }
+    .badge-ok { background:#05a653; }
+    .badge-no { background:#e32339; }
+    .doc-link { color:#1c5db0; text-decoration:underline; font-weight:600; }`r`n    .actions { white-space: nowrap; min-width: 130px; }`r`n    .actions .btn { padding: 4px 10px; font-size: .78rem; font-weight: 700; }
 
-        .logo-mark {
-            width: 58px;
-            height: 28px;
-            position: relative;
-        }
+    .paginate-row { display:flex; justify-content:space-between; align-items:center; padding:12px 4px 2px; color:#4d5b76; font-weight:600; flex-wrap:wrap; gap:10px; }
+    .pager { display:flex; gap:6px; align-items:center; }
+    .pager a, .pager span { border:1px solid #ccd4e4; padding:6px 10px; border-radius:4px; text-decoration:none; color:#2f4467; font-weight:700; }
+    .pager .active { background:#1f67c2; color:#fff; border-color:#1f67c2; }
+</style>
+<?= $this->endSection() ?>
 
-        .logo-mark::before,
-        .logo-mark::after {
-            content: '';
-            position: absolute;
-            transform: skewX(-32deg);
-            border-radius: 2px;
-        }
-
-        .logo-mark::before {
-            left: 0;
-            top: 9px;
-            width: 32px;
-            height: 10px;
-            background: #1f6fd2;
-        }
-
-        .logo-mark::after {
-            right: 0;
-            top: 0;
-            width: 24px;
-            height: 10px;
-            background: #f44336;
-            box-shadow: 0 12px 0 0 #11aa4d;
-        }
-
-        .logo-name {
-            line-height: 1.04;
-            font-weight: 800;
-            font-size: .95rem;
-            text-align: right;
-        }
-
-        .logo-name .red { color: #ff4b3e; }
-
-        .tab-strip {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 16px 10px;
-            border-bottom: 1px solid #e3e6ee;
-            background: #f7f8fc;
-        }
-
-        .tab-btn {
-            min-width: 260px;
-            border: 1px solid #cbd3e6;
-            border-bottom-width: 2px;
-            color: #334664;
-            background: linear-gradient(180deg, #f2f5fb, #e5eaf4);
-            border-radius: 8px 8px 0 0;
-            padding: 10px 14px;
-            text-align: center;
-            font-weight: 700;
-            text-decoration: none;
-            transition: .2s ease;
-        }
-
-        .tab-btn.active {
-            background: #fff;
-            border-color: #9fb3d6;
-            color: #1c3f7a;
-        }
-
-        .content { padding: 16px 20px 20px; }
-
-        .quick-action {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 10px;
-        }
-
-        .quick-action .btn {
-            font-weight: 700;
-            border-radius: 8px;
-            padding: 8px 16px;
-        }
-
-        .kpi-card {
-            border-radius: 8px;
-            overflow: hidden;
-            color: #fff;
-            min-height: 136px;
-            border: 1px solid rgba(255,255,255,.2);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
-        }
-
-        .kpi-head {
-            font-size: 1.05rem;
-            font-weight: 700;
-            letter-spacing: .3px;
-            text-transform: uppercase;
-            text-align: center;
-            padding: 10px 12px;
-            border-bottom: 1px solid rgba(255,255,255,.2);
-        }
-
-        .kpi-body {
-            min-height: 84px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1;
-        }
-
-        .kpi-total { background: linear-gradient(180deg, var(--blue-1), var(--blue-2)); }
-        .kpi-active { background: linear-gradient(180deg, var(--green-1), var(--green-2)); }
-        .kpi-inactive { background: linear-gradient(180deg, var(--red-1), var(--red-2)); }
-
-        .status-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255,255,255,.95);
-            color: #0a8f4b;
-            font-size: 1.8rem;
-            font-weight: 800;
-            line-height: 1;
-        }
-
-        .status-icon.red { color: #dc2338; }
-
-        .filters {
-            margin: 14px 0 12px;
-            padding: 10px 0;
-            border-top: 1px solid #e7ebf4;
-            border-bottom: 1px solid #e7ebf4;
-        }
-
-        .filters .form-select {
-            border-color: #ccd4e4;
-            color: #3d4d67;
-            font-weight: 600;
-            border-radius: 6px;
-            font-size: .92rem;
-        }
-
-        .chart-card {
-            border: 1px solid #e2e6f0;
-            border-radius: 4px;
-            padding: 12px;
-            min-height: 320px;
-            background: #fff;
-        }
-
-        .chart-card h3 {
-            text-align: center;
-            margin: 2px 0 12px;
-            font-size: 1.9rem;
-            color: #2e3f5e;
-            font-weight: 700;
-        }
-
-        .table-title {
-            margin-top: 14px;
-            background: linear-gradient(90deg, #0d4a9a, #2370cb);
-            color: #fff;
-            padding: 10px 14px;
-            font-size: 1.35rem;
-            font-weight: 700;
-            letter-spacing: .3px;
-        }
-
-        .doc-table { border: 1px solid #e3e7f1; border-top: 0; }
-        .doc-table table { margin: 0; }
-        .doc-table thead th {
-            font-size: .9rem;
-            font-weight: 700;
-            color: #334362;
-            background: #f7f9fd;
-            white-space: nowrap;
-        }
-
-        .doc-table tbody td {
-            font-size: .88rem;
-            color: #2f3f60;
-            vertical-align: middle;
-        }
-
-        .badge-state {
-            padding: 6px 10px;
-            font-size: .78rem;
-            font-weight: 700;
-            border-radius: 6px;
-        }
-
-        .badge-ok { background: #05a653; }
-        .badge-no { background: #e32339; }
-
-        .doc-link {
-            color: #1c5db0;
-            text-decoration: underline;
-            font-weight: 600;
-        }
-
-        @media (max-width: 992px) {
-            .hero { padding: 14px 16px; }
-            .hero h1 { font-size: 1.2rem; }
-            .logo-name { font-size: .72rem; }
-            .tab-btn { min-width: 1px; width: 100%; font-size: .88rem; }
-            .kpi-head { font-size: .88rem; }
-            .kpi-body { font-size: 2.2rem; }
-            .chart-card h3 { font-size: 1.2rem; }
-            .table-title { font-size: 1rem; }
-        }
-    </style>
-</head>
-<body>
+<?= $this->section('content') ?>
 <?php
 $total = max(1, (int) ($summary['total_documents'] ?? 0));
 $active = (int) ($summary['active_documents'] ?? 0);
@@ -294,139 +47,124 @@ $inactive = (int) ($summary['inactive_documents'] ?? 0);
 $activePct = (int) round(($active / $total) * 100);
 $inactivePct = (int) round(($inactive / $total) * 100);
 ?>
-<div class="dashboard-wrap">
-    <header class="hero">
-        <h1>Dashboard Monitoring Peraturan Operasional</h1>
-        <div class="logo-pgn" aria-label="Pertamina Gas Negara">
-            <div class="logo-mark"></div>
-            <div class="logo-name">PERTAMINA<br><span class="red">GAS NEGARA</span></div>
-        </div>
-    </header>
 
-    <div class="tab-strip">
-        <a class="tab-btn active" href="/dashboard">Dashboard Peraturan</a>
-        <a class="tab-btn" href="/kamus-istilah">Kamus Istilah Operasional</a>
-    </div>
-
-    <main class="content">
-        <div class="quick-action">
-            <a class="btn btn-primary" href="/dashboard/upload">Upload Dokumen</a>
-        </div>
-
-        <div class="row g-3">
-            <div class="col-lg-4">
-                <div class="kpi-card kpi-total">
-                    <div class="kpi-head">Total Peraturan</div>
-                    <div class="kpi-body"><?= esc((string) $summary['total_documents']) ?></div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="kpi-card kpi-active">
-                    <div class="kpi-head">Peraturan Berlaku</div>
-                    <div class="kpi-body"><span class="status-icon">&#10003;</span><?= esc((string) $summary['active_documents']) ?></div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="kpi-card kpi-inactive">
-                    <div class="kpi-head">Peraturan Tidak Berlaku</div>
-                    <div class="kpi-body"><span class="status-icon red">&#10005;</span><?= esc((string) $summary['inactive_documents']) ?></div>
-                </div>
-            </div>
-        </div>
-
-        <form method="get" id="filterForm" class="row g-2 filters">
-            <div class="col-md-3">
-                <select class="form-select" name="document_type_id" onchange="document.getElementById('filterForm').submit()">
-                    <option value="">Jenis Dokumen: Semua</option>
-                    <?php foreach ($documentTypes as $type): ?>
-                        <option value="<?= esc((string) $type['id']) ?>" <?= (string) $filters['document_type_id'] === (string) $type['id'] ? 'selected' : '' ?>><?= esc($type['name']) ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-            <div class="col-md-3">
-                <select class="form-select" name="workflow_id" onchange="document.getElementById('filterForm').submit()">
-                    <option value="">Alur Kerja: Semua</option>
-                    <?php foreach ($workflows as $workflow): ?>
-                        <option value="<?= esc((string) $workflow['id']) ?>" <?= (string) $filters['workflow_id'] === (string) $workflow['id'] ? 'selected' : '' ?>><?= esc($workflow['name']) ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-            <div class="col-md-3">
-                <select class="form-select" name="institution_id" onchange="document.getElementById('filterForm').submit()">
-                    <option value="">Lembaga: Semua</option>
-                    <?php foreach ($institutions as $institution): ?>
-                        <option value="<?= esc((string) $institution['id']) ?>" <?= (string) $filters['institution_id'] === (string) $institution['id'] ? 'selected' : '' ?>><?= esc($institution['name']) ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-            <div class="col-md-3">
-                <select class="form-select" name="period" onchange="document.getElementById('filterForm').submit()">
-                    <option value="">Periode: Semua</option>
-                    <?php foreach ($periodOptions as $period): ?>
-                        <option value="<?= esc($period) ?>" <?= (string) $filters['period'] === (string) $period ? 'selected' : '' ?>>Periode: <?= esc($period) ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-        </form>
-
-        <div class="row g-3">
-            <div class="col-md-4">
-                <section class="chart-card">
-                    <h3>Status Peraturan</h3>
-                    <canvas id="statusChart" height="240"></canvas>
-                    <div class="text-center mt-2 small text-secondary fw-semibold">
-                        Berlaku <?= esc((string) $activePct) ?>% | Tidak Berlaku <?= esc((string) $inactivePct) ?>%
-                    </div>
-                </section>
-            </div>
-            <div class="col-md-8">
-                <section class="chart-card">
-                    <h3>Jenis Dokumen</h3>
-                    <canvas id="typeChart" height="240"></canvas>
-                </section>
-            </div>
-        </div>
-
-        <div class="table-title">DAFTAR PERATURAN TERKINI</div>
-        <div class="doc-table table-responsive">
-            <table class="table table-bordered table-striped align-middle">
-                <thead>
-                <tr>
-                    <th>Kode</th>
-                    <th>Judul Peraturan</th>
-                    <th>Versi</th>
-                    <th>Status</th>
-                    <th>Link Dokumen</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php foreach ($latestDocs as $doc): ?>
-                    <tr>
-                        <td><?= esc($doc['code']) ?></td>
-                        <td><?= esc($doc['title']) ?></td>
-                        <td><?= esc($doc['revision'] ?? '-') ?></td>
-                        <td>
-                            <span class="badge badge-state <?= ($doc['status'] ?? '') === 'Berlaku' ? 'badge-ok' : 'badge-no' ?>">
-                                <?= esc($doc['status'] ?? '-') ?>
-                            </span>
-                        </td>
-                        <td>
-                            <?php if (! empty($doc['file_path']) || ! empty($doc['external_link'])): ?>
-                                <a class="doc-link" target="_blank" href="<?= route_to('documents.download', $doc['id']) ?>">Lihat Dokumen</a>
-                            <?php elseif (! empty($doc['file_name'])): ?>
-                                <?= esc($doc['file_name']) ?>
-                            <?php else: ?>
-                                -
-                            <?php endif; ?>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-                </tbody>
-            </table>
-        </div>
-    </main>
+<div class="page-titlebar">
+    <h2>Dashboard Peraturan</h2>
+    <p>Monitoring peraturan operasional, status berlaku, komposisi jenis dokumen, dan daftar dokumen terkini.</p>
 </div>
 
+<div class="toolbar">
+    <form method="get" class="search-form">
+        <input type="hidden" name="document_type_id" value="<?= esc((string) ($filters['document_type_id'] ?? '')) ?>">
+        <input type="hidden" name="workflow_id" value="<?= esc((string) ($filters['workflow_id'] ?? '')) ?>">
+        <input type="hidden" name="institution_id" value="<?= esc((string) ($filters['institution_id'] ?? '')) ?>">
+        <input type="hidden" name="status" value="<?= esc((string) ($filters['status'] ?? '')) ?>">
+        <input type="hidden" name="period" value="<?= esc((string) ($filters['period'] ?? '')) ?>">
+        <input type="hidden" name="sort" value="<?= esc((string) ($filters['sort'] ?? 'latest')) ?>">
+        <div class="input-group">
+            <input type="text" class="form-control" name="q" placeholder="Search kode/judul peraturan..." value="<?= esc((string) ($filters['q'] ?? '')) ?>">
+            <button class="input-group-text" type="submit">&#128269;</button>
+        </div>
+    </form>
+
+    <a class="btn btn-primary" href="<?= site_url('dashboard/upload') ?>">Upload Dokumen</a>
+</div>
+
+<div class="row g-3">
+    <div class="col-lg-4">
+        <div class="kpi-card kpi-total">
+            <div class="kpi-head">Total Peraturan</div>
+            <div class="kpi-body"><?= esc((string) $summary['total_documents']) ?></div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="kpi-card kpi-active">
+            <div class="kpi-head">Peraturan Berlaku</div>
+            <div class="kpi-body"><span class="status-icon">&#10003;</span><?= esc((string) $summary['active_documents']) ?></div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="kpi-card kpi-inactive">
+            <div class="kpi-head">Peraturan Tidak Berlaku</div>
+            <div class="kpi-body"><span class="status-icon red">&#10005;</span><?= esc((string) $summary['inactive_documents']) ?></div>
+        </div>
+    </div>
+</div>
+
+<form method="get" id="filterForm" class="row g-2 filters">
+    <input type="hidden" name="q" value="<?= esc((string) ($filters['q'] ?? '')) ?>">
+    <div class="col-md-2">
+        <select class="form-select" name="document_type_id" onchange="document.getElementById('filterForm').submit()">
+            <option value="">Jenis Dokumen: Semua</option>
+            <?php foreach ($documentTypes as $type): ?>
+                <option value="<?= esc((string) $type['id']) ?>" <?= (string) ($filters['document_type_id'] ?? '') === (string) $type['id'] ? 'selected' : '' ?>><?= esc($type['name']) ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <select class="form-select" name="workflow_id" onchange="document.getElementById('filterForm').submit()">
+            <option value="">Alur Kerja: Semua</option>
+            <?php foreach ($workflows as $workflow): ?>
+                <option value="<?= esc((string) $workflow['id']) ?>" <?= (string) ($filters['workflow_id'] ?? '') === (string) $workflow['id'] ? 'selected' : '' ?>><?= esc($workflow['name']) ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <select class="form-select" name="institution_id" onchange="document.getElementById('filterForm').submit()">
+            <option value="">Lembaga: Semua</option>
+            <?php foreach ($institutions as $institution): ?>
+                <option value="<?= esc((string) $institution['id']) ?>" <?= (string) ($filters['institution_id'] ?? '') === (string) $institution['id'] ? 'selected' : '' ?>><?= esc($institution['name']) ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <select class="form-select" name="status" onchange="document.getElementById('filterForm').submit()">
+            <option value="">Status: Semua</option>
+            <option value="Berlaku" <?= (string) ($filters['status'] ?? '') === 'Berlaku' ? 'selected' : '' ?>>Berlaku</option>
+            <option value="Tidak Berlaku" <?= (string) ($filters['status'] ?? '') === 'Tidak Berlaku' ? 'selected' : '' ?>>Tidak Berlaku</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <select class="form-select" name="period" onchange="document.getElementById('filterForm').submit()">
+            <option value="">Periode: Semua</option>
+            <?php foreach ($periodOptions as $period): ?>
+                <option value="<?= esc($period) ?>" <?= (string) ($filters['period'] ?? '') === (string) $period ? 'selected' : '' ?>><?= esc($period) ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <select class="form-select" name="sort" onchange="document.getElementById('filterForm').submit()">
+            <?php foreach ($sortOptions as $key => $label): ?>
+                <option value="<?= esc($key) ?>" <?= (string) ($filters['sort'] ?? 'latest') === (string) $key ? 'selected' : '' ?>>Sort: <?= esc($label) ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+</form>
+
+<div class="row g-3">
+    <div class="col-md-4">
+        <section class="chart-card">
+            <h3>Status Peraturan</h3>
+            <canvas id="statusChart" height="220"></canvas>
+            <div class="text-center mt-2 small text-secondary fw-semibold">
+                Berlaku <?= esc((string) $activePct) ?>% | Tidak Berlaku <?= esc((string) $inactivePct) ?>%
+            </div>
+        </section>
+    </div>
+    <div class="col-md-8">
+        <section class="chart-card">
+            <h3>Jenis Dokumen</h3>
+            <canvas id="typeChart" height="220"></canvas>
+        </section>
+    </div>
+</div>
+
+<div id="latestDocsSection">
+    <?= view('dashboard/partials/latest_docs_table', ['latestDocs' => $latestDocs, 'latestDocsMeta' => $latestDocsMeta]) ?>
+</div>
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>
 <script>
     const statusChartData = <?= json_encode($statusChart, JSON_UNESCAPED_UNICODE) ?>;
     const typeChartData = <?= json_encode($typeChart, JSON_UNESCAPED_UNICODE) ?>;
@@ -479,7 +217,7 @@ $inactivePct = (int) round(($inactive / $total) * 100);
                 data: typeChartData.map(i => Number(i.total)),
                 backgroundColor: '#1f67c2',
                 borderRadius: 2,
-                maxBarThickness: 56
+                maxBarThickness: 50
             }]
         },
         options: {
@@ -496,7 +234,41 @@ $inactivePct = (int) round(($inactive / $total) * 100);
             }
         }
     });
+
+    document.addEventListener('click', async (event) => {
+        const link = event.target.closest('.js-docs-page');
+        if (!link) {
+            return;
+        }
+
+        event.preventDefault();
+        const section = document.getElementById('latestDocsSection');
+        const url = link.getAttribute('href');
+        const ajaxUrl = url + (url.includes('?') ? '&' : '?') + 'ajax_docs=1';
+
+        try {
+            const response = await fetch(ajaxUrl, {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            });
+            if (!response.ok) {
+                window.location.href = url;
+                return;
+            }
+
+            const payload = await response.json();
+            if (!payload || typeof payload.html !== 'string') {
+                window.location.href = url;
+                return;
+            }
+
+            section.innerHTML = payload.html;
+            window.history.replaceState({}, '', url);
+        } catch (error) {
+            window.location.href = url;
+        }
+    });
 </script>
-</body>
-</html>
+<?= $this->endSection() ?>
 

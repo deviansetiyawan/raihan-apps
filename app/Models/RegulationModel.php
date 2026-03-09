@@ -37,8 +37,8 @@ class RegulationModel extends Model
             ->getRowArray();
 
         return [
-            'total_documents'   => (int) ($row['total_documents'] ?? 0),
-            'active_documents'  => (int) ($row['active_documents'] ?? 0),
+            'total_documents'    => (int) ($row['total_documents'] ?? 0),
+            'active_documents'   => (int) ($row['active_documents'] ?? 0),
             'inactive_documents' => (int) ($row['inactive_documents'] ?? 0),
         ];
     }
@@ -64,15 +64,26 @@ class RegulationModel extends Model
             ->getResultArray();
     }
 
-    public function getLatestDocuments(array $filters = []): array
+    public function getLatestDocumentsPaginated(array $filters = [], int $perPage = 10, int $page = 1): array
     {
-        return $this->baseBuilder($filters)
-            ->select('regulations.id, regulations.code, regulations.title, regulations.revision, regulations.status, regulations.file_name, regulations.file_path, regulations.external_link, regulations.effective_date')
-            ->orderBy('regulations.effective_date', 'DESC')
-            ->orderBy('regulations.id', 'DESC')
-            ->limit(6)
+        $builder = $this->baseBuilder($filters)
+            ->select('regulations.id, regulations.code, regulations.title, regulations.revision, regulations.status, regulations.file_name, regulations.file_path, regulations.external_link, regulations.effective_date');
+
+        $this->applySort($builder, $filters['sort'] ?? 'latest');
+
+        $countBuilder = clone $builder;
+        $total = (int) $countBuilder->countAllResults();
+
+        $offset = max(0, ($page - 1) * $perPage);
+        $rows = $builder
+            ->limit($perPage, $offset)
             ->get()
             ->getResultArray();
+
+        return [
+            'rows'  => $rows,
+            'total' => $total,
+        ];
     }
 
     public function getAvailableYears(): array
@@ -84,6 +95,33 @@ class RegulationModel extends Model
             ->findAll();
 
         return array_values(array_filter(array_map(static fn ($row) => (int) ($row['year'] ?? 0), $rows)));
+    }
+
+    private function applySort($builder, string $sort): void
+    {
+        switch ($sort) {
+            case 'version_desc':
+                $builder->orderBy('CAST(NULLIF(regulations.revision, "") AS UNSIGNED)', 'DESC', false)
+                    ->orderBy('regulations.effective_date', 'DESC');
+                break;
+            case 'version_asc':
+                $builder->orderBy('CAST(NULLIF(regulations.revision, "") AS UNSIGNED)', 'ASC', false)
+                    ->orderBy('regulations.effective_date', 'DESC');
+                break;
+            case 'status_asc':
+                $builder->orderBy('regulations.status', 'ASC')
+                    ->orderBy('regulations.effective_date', 'DESC');
+                break;
+            case 'status_desc':
+                $builder->orderBy('regulations.status', 'DESC')
+                    ->orderBy('regulations.effective_date', 'DESC');
+                break;
+            case 'latest':
+            default:
+                $builder->orderBy('regulations.effective_date', 'DESC')
+                    ->orderBy('regulations.id', 'DESC');
+                break;
+        }
     }
 
     private function baseBuilder(array $filters)
@@ -105,6 +143,18 @@ class RegulationModel extends Model
             $builder->where('regulations.institution_id', (int) $filters['institution_id']);
         }
 
+        if (! empty($filters['status'])) {
+            $builder->where('regulations.status', (string) $filters['status']);
+        }
+
+        if (! empty($filters['q'])) {
+            $q = trim((string) $filters['q']);
+            $builder->groupStart()
+                ->like('regulations.code', $q)
+                ->orLike('regulations.title', $q)
+                ->groupEnd();
+        }
+
         if (! empty($filters['period_start']) && ! empty($filters['period_end'])) {
             $builder->where('YEAR(regulations.effective_date) >=', (int) $filters['period_start']);
             $builder->where('YEAR(regulations.effective_date) <=', (int) $filters['period_end']);
@@ -113,4 +163,3 @@ class RegulationModel extends Model
         return $builder;
     }
 }
-

@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/app_shell') ?>
+﻿<?= $this->extend('layouts/app_shell') ?>
 
 <?= $this->section('head') ?>
 <style>
@@ -11,8 +11,8 @@
 
 <?= $this->section('content') ?>
 <div class="page-titlebar">
-    <h2>Tambah Istilah Operasional</h2>
-    <p>Tambahkan istilah baru dan tautkan langsung ke dokumen referensi melalui LOV.</p>
+    <h2>Edit Istilah Operasional</h2>
+    <p>Perbarui istilah, definisi, dan dokumen referensi terkait.</p>
 </div>
 
 <?php if (session()->getFlashdata('errors')): ?>
@@ -24,13 +24,13 @@
 <?php endif; ?>
 
 <div class="box">
-    <form method="post" action="<?= route_to('terms.store') ?>">
+    <form method="post" action="<?= route_to('terms.update', $term['id']) ?>">
         <?= csrf_field() ?>
 
         <div class="row g-3">
             <div class="col-md-6">
                 <label class="form-label">Istilah</label>
-                <input type="text" name="term" value="<?= esc(old('term')) ?>" class="form-control" required>
+                <input type="text" name="term" value="<?= esc(old('term', $term['term'])) ?>" class="form-control" required>
             </div>
 
             <div class="col-md-6">
@@ -42,7 +42,7 @@
                             value="<?= esc((string) $regulation['id']) ?>"
                             data-code="<?= esc($regulation['code']) ?>"
                             data-url="<?= esc($regulation['download_url']) ?>"
-                            <?= old('regulation_id') == $regulation['id'] ? 'selected' : '' ?>
+                            <?= (string) old('regulation_id', $term['regulation_id']) === (string) $regulation['id'] ? 'selected' : '' ?>
                         >
                             <?= esc($regulation['code']) ?> | <?= esc($regulation['title']) ?>
                         </option>
@@ -52,7 +52,7 @@
 
             <div class="col-md-12">
                 <label class="form-label">Definisi</label>
-                <textarea name="definition" class="form-control" rows="5" required><?= esc(old('definition')) ?></textarea>
+                <textarea name="definition" class="form-control" rows="5" required><?= esc(old('definition', $term['definition'])) ?></textarea>
             </div>
 
             <div class="col-md-6">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="mt-4 d-flex gap-2">
-            <button type="submit" class="btn btn-primary">Simpan Istilah</button>
+            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
             <a href="<?= route_to('terms.index') ?>" class="btn btn-outline-secondary">Kembali</a>
         </div>
     </form>
