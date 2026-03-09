@@ -1,0 +1,376 @@
+{
+  "records": [
+    {
+      "term": "Area",
+      "definition": "Fungsi yang memiliki tugas melakukan market research, melakukan kegiatan penjualan gas dan LNG, melakukan aktivitas customer relationship management, mengelola koordinasi perencanaan dan pelaksanaan pembangunan jaringan pipa gas serta penunjang fasilitas lainnya hinggauntuk pelanggan korporat dan retail di wilayah eksisting maupun wilayah extension Area sesuai dengan SK Ortaker Direktorat Komersial yang terbaru.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Area Support",
+      "definition": "satuan kerja yang mempunyai tugas menyiapkan rekapitulasi kinerja Area dan membantu Area Head untuk mengendalikasi kinerja Area; melakukan penyusunan rencana kerja dan anggaran di Area serta melakukan pengelolaan pengendalian anggarannya;  mengelola aktivitas billing pelanggan gas pipa dan LNG; menyiapkan dokumen penagihan/billing dalam rangka perolehan hak pembayaran kepada PGN atas kontrak infrastruktur gas dan/atau LNG dari pelanggan yang berlokasi di regional setempat, yang besaran imbal jasanya ditentukan baik berdasarkan omoditas yang dikelola atau diproduksi maupun berdasarkan pemenuhan SLA kinerja infrastruktur dan/atau waktu pemanfaatan infrastruktur; mengelola kegiatan – kegiatan penunjang aktivitas sales dan operasi diArea namun tidak terbatas pada beberapa hal sebagai berikut : pengelola citra positif PGN (stakeholder relations, kegiatan komunikasi PGN & Media, CSR, evento, dan keprotokolan sesuai ketentuan yang ditetapkan oleh corporate secretary), administrasi dengan pihak ketiga, administrasi umum, serta keuangan, dan administrasi pembayaran pajak daerah di Area.",
+      "reference_code": "PO_O-013/A055",
+      "link_label": "PO_O-013/A055_2022_Perhitungan Taksasi.pdf"
+    },
+    {
+      "term": "BBG",
+      "definition": "Bukti Berlangganan Gas",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Breakdown",
+      "definition": "Program promosi berupa pemberian harga Gas tertentu (lebih kompetitif) kepada Pelanggan Komersial dan Industri yang mengalami gangguan atau kerusakan pada peralatan produksi atau fasilitas gas milik pelanggan. Program ini bertujuan untuk meringankan beban biaya energi pelanggan selama masa pemulihan operasional setelah terjadinya kendala teknis.",
+      "reference_code": "KEPDIR_033700.K/PP.03/COD/2025",
+      "link_label": "K-033700-Keputusan Direksi PT PGN Tbk tentang Program Breakdown untuk Pelanggan Komersial & Industri.pdf"
+    },
+    {
+      "term": "Breakout",
+      "definition": "Program promosi PGN yang memberikan fleksibilitas pengambilan Gas Deposit bagi pelanggan komersial dan industri sub-produk Silver, Gold, dan Platinum pada akhir periode kontrak, dengan tujuan mengoptimalkan pemanfaatan Gas Deposit serta mendukung kinerja operasional dan penjualan gas.",
+      "reference_code": "KEPDIR_005303.K/PP.02/COD/2023",
+      "link_label": "KEPDIR_005303_2023_Program Breakout untuk Pelanggan Komersial dan Industri.pdf"
+    },
+    {
+      "term": "Early Flare",
+      "definition": "Program promosi berupa pemberlakuan harga gas tertentu yang lebih kompetitif bagi Pelanggan Komersial dan Industri yang menggunakan produk dengan skema Basis Kontrak Harian dan Basis Kontrak Tahunan. Program ini memberikan harga khusus dalam jangka waktu tertentu untuk mendukung efisiensi biaya gas pelanggan.",
+      "reference_code": "KEPDIR_005302.K/PP.00/COD/2023",
+      "link_label": "KEPDIR_005302_2023_Program Early Flare untuk Pelanggan Komersial dan Industri.pdf"
+    },
+    {
+      "term": "Engage",
+      "definition": "Program promosi berupa pemberian harga Gas tertentu yang lebih kompetitif kepada Pelanggan Komersial dan Industri yang berada dalam kondisi khusus untuk mempertahankan keberlangsungan penggunaan Gas (customer retention). Program ini bertujuan untuk menjaga agar pelanggan tidak beralih ke bahan bakar alternatif atau berhenti berlangganan dalam situasi pasar yang menantang.",
+      "reference_code": "KEPDIR_018004.K/PP.02/COD/2023",
+      "link_label": "ENGAGE.PDF"
+    },
+    {
+      "term": "EVC",
+      "definition": "Electronic Volume Converter atau Electronic Volume Corrector adalah peralatan elektronik yang digunakan untuk menghitung jumlah volume gas terkonversi yang mengalir dalam pipa gas.",
+      "reference_code": "PO_O-013/A055",
+      "link_label": "PO_O-013/A055_2022_Perhitungan Taksasi.pdf"
+    },
+    {
+      "term": "Force Majeure",
+      "definition": "Setiap kejadian atau peristiwa di luar kendali salah satu Pihak dan yang mana secara wajar tidak dapat dihindari atau dicegah oleh Pihak terdampak Force Majeure tersebut untuk melaksanakan kewahibannya berdasarkan Perjanjian.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "FRBG",
+      "definition": "Formulir Registrasi Berlangganan Gas",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Gas Deposit",
+      "definition": "Sejumlah Gas yang sudah dibayarkan akan tetapi belum dipakai oleh Pelanggan sebagaimana diatur dalam Ketentuan Produk.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "Gas In",
+      "definition": "Pengaliran Gas pertama kali atau pengaliran kembali ke fasilitas milik Pelanggan",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "GasKita",
+      "definition": "GasKita adalah layanan dari PGN yang menyediakan gas bumi langsung ke rumah untuk berbagai keperluan rumah tangga atau usaha kecil dengan range volume 50 - 1.000 m3",
+      "reference_code": null,
+      "link_label": null
+    },
+    {
+      "term": "GasKu",
+      "definition": "GasKu adalah Bahan Bakar Gas (BBG) berbasis Compressed Natural Gas (CNG) dari PT Gagas Energi Indonesia (anak usaha PGN/Pertamina) yang ramah lingkungan dan ekonomis. Dijual seharga Rp 4.500 per liter setara premium, GasKu mampu menghemat biaya bahan bakar hingga 55%. GasKu cocok untuk transportasi umum dan pribadi dan memerlukan pemasangan converter kit.",
+      "reference_code": null,
+      "link_label": null
+    },
+    {
+      "term": "GasLine",
+      "definition": "GasLine adalah layanan dari PGN yang menyediakan gas bumi langsung ke pelanggan komersial dan industri untuk berbagai keperluan produksi atau usaha dengan skema berlangganan yang bervariasi.",
+      "reference_code": null,
+      "link_label": null
+    },
+    {
+      "term": "GasLink",
+      "definition": "Solusi penyaluran gas bumi dari PT Gagas Energi Indonesia (anak usaha PGN/ Pertamina) yang berbentuk Compressed Natural Gas (CNG) yang didistribusikan dalam tabung atau modul khusus (GTM) ke pelanggan yang belum terjangkau jaringan pipa gas, seperti industri, komersial, UMKM, bahkan rumah tangga, menawarkan fleksibilitas, efisiensi biaya, dan kepraktisan dengan sistem pembayaran sesuai pemakaian, menjadi alternatif lebih hemat dan ramah lingkungan dibandingkan LPG.",
+      "reference_code": null,
+      "link_label": null
+    },
+    {
+      "term": "Gas Optimasi",
+      "definition": "Sejumlah gas yang dipesan pelanggan pada Hari Sabtu dan/atau Hari Minggu dan/atau Periode Libur Massal dengan pemberlakuan harga Gas tertentu, dimana pelaksanaan penjualan Gas Optimasi diatur sebagaimana dalam Surat Edaran Direksi ini.",
+      "reference_code": "SE_009300.SE/PP.00/COD/2022",
+      "link_label": "009300.SE.PP.0.COD.2022 SURAT EDARAN TENTANG GAS OPTIMASI PADA HARI SABTU HARI MINGGU DAN PERIODE LIBUR MASSAL.pdf"
+    },
+    {
+      "term": "Gas Regasifikasi",
+      "definition": "Produk gas yang berasal dari proses regasifikasi LNG untuk memenuhi kebutuhan gas pelanggan dalam jangka waktu tertentu.",
+      "reference_code": "KEPDIR_009000.K/PP.03/COD/2024",
+      "link_label": "SK 009000. Penjualan Regasifikasi.pdf"
+    },
+    {
+      "term": "Gas Substitusi",
+      "definition": "Sejumlah gas pengganti yang berasal dari Gas hasil regasifikasi LNG dan/ atau Gas yang berasal dari sumber Gas yang baru yang disalurkan kepada Pelanggan Kuota dengan pelaksanaan penjualan Gas Substitusi.",
+      "reference_code": "SE_018500.SE/PP.00/COD/2021",
+      "link_label": "K-018500-Surat Edaran tentang Gas Substitusi Pada Periode Keadaan Kahar Pemasok Gas (“SED Gas Substitusi”).pdf"
+    },
+    {
+      "term": "GPiK",
+      "definition": "Pelanggan kecil yang mendapatkan produk GasKita Pintar dengan manfaat tambahan lainnya yang berbeda dari produk GasKita Praktis dengan tetap memperhatikan kemampuan Pelanggan dan PGN.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "GPiR",
+      "definition": "Pelanggan Rumah Tangga yang mendapatkan produk GasKita Pintar dengan manfaat tambahan lainnya yang  berbeda dari produk  GasKita Praktis dengan tetap memperhatikan kemampuan Pelanggan dan PGN",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Jaminan Pembayaran dalam bentuk Selain Uang Tunai",
+      "definition": "Jaminan Pembayaran yang disediakan oleh Pelanggan Pascabayar dalam bentuk selain uang tunai yang diterbitkan oleh perbankan dan/ atau perusahaan asuransi dan/atau perusahaan penjamin",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Jaminan Pembayaran dalam bentuk Uang Tunai",
+      "definition": "Jaminan Pembayaran yang diberikan Calon Pelanggan atau Pelanggan Pascabayar dengan cara menempatkan sejumlah uang tunai ke rekening PGN",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "JRG",
+      "definition": "JARGAS adalah Jenis rekening untuk pendataan calon pelanggan dengan penugasan pemerintah",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Kurs JISDOR",
+      "definition": "Harga spot Dolar Amerika terhadap Rupiah yang disusun berdasarkan kurs transaksi  Dolar Amerika terhadap Rupiah antar bank di pasar valuta asing Indonesia, yang diperoleh secara real time melalui Sistem Monitoring Transaksi Valuta Asing terhadap  Rupiah (SISMONTAVAR) di Bank Indonesia.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "Libur Massal",
+      "definition": "Hari libur nasional yang ditetapkan pemerintah dalam rangka memperingati hari raya dan hari suci keagamaan",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "Linkage",
+      "definition": "Program promosi berupa penyesuaian ketentuan pembayaran Biaya Penyambungan yang diberikan kepada calon pelanggan. Program ini bertujuan untuk memberikan kemudahan akses bagi calon pelanggan melalui skema pembebasan, pengurangan, atau pengangsuran biaya penyambungan awal.",
+      "reference_code": "KEPDIR_023800.K/PP.02/COD/2024",
+      "link_label": "KEPDIR_023800_2024_PROGRAM LINKAGE UNTUK PELANGGAN KOMERSIAL DAN INDUSTRI.pdf"
+    },
+    {
+      "term": "Liquiefied Natural Gas",
+      "definition": "LNG adalah gas bumi dengan komponen utama berupa metana (CH4) dan campuran lainnya yang dicairkan dengan cara didinginkan hingga mencapai temperatur -160 C pada tekanan atmosfer.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "Manage",
+      "definition": "Program promosi PGN berupa penyesuaian sementara jumlah pemakaian gas pelanggan melalui amandemen perjanjian, yang diberlakukan pada kondisi tertentu seperti kebijakan pemerintah, wabah, atau penyesuaian harga gas, dengan tujuan menjaga keberlanjutan operasional pelanggan dan kinerja PGN.",
+      "reference_code": "KEPDIR_044900.K/PP.02/COD/2025",
+      "link_label": "K-044900-Keputusan Direksi PT PGN Tbk tentang Program Manage untuk Pelanggan Komersial dan Industri.pdf"
+    },
+    {
+      "term": "Masa Transisi",
+      "definition": "Jangka waktu tertentu untuk menguji kemampuan kapasitas Peralatan Gas dan/ atau produksi Pelanggan",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "Meter Gas",
+      "definition": "Sistem alat ukur beserta perlengkapannya termasuk tetapi tidak terbatas kepada Electronic Volume Converter/ Flow Computer/ Flow Recorder (jika ada) yang dimiliki dan / atau dikuasai dan dioperasikan oleh PGN yang berada di Lokasi Pelanggan atau tempat lainnya yang disepakati oleh PGN dan Pelanggan dan digunakan sebagai dasar perhitungan pemakaian Gas.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "Mileage",
+      "definition": "Program promosi berupa pemberian harga gas khusus yang lebih kompetitif kepada pelanggan yang memiliki volume pemakaian gas yang sangat besar atau pelanggan yang bersedia meningkatkan konsumsi gasnya secara signifikan dalam periode waktu tertentu. Program ini bertujuan untuk memberikan apresiasi berupa efisiensi biaya bagi pelanggan dengan profil penggunaan skala besar.",
+      "reference_code": "KEPDIR_044400.K/PP.02/COD/2025",
+      "link_label": "K-044400-Keputusan Direksi PT PGN Tbk tentang Program Mileage untuk Pelanggan Komersial dan Industri.pdf"
+    },
+    {
+      "term": "MMBtu",
+      "definition": "Million Metric British Thermal Units",
+      "reference_code": null,
+      "link_label": null
+    },
+    {
+      "term": "Multi Destinasi",
+      "definition": "Skema penyaluran gas PGN yang memungkinkan pelanggan grup menggunakan satu kontrak payung untuk menyalurkan gas ke beberapa titik penyerahan (delivery point) dalam satu sistem jaringan gas PGN, dengan fleksibilitas pengaturan pemakaian antar titik.",
+      "reference_code": "KEPDIR_011500.K/HK.02/COD/2019",
+      "link_label": "Sosialisasi Multii Destinasi 2020.pptx"
+    },
+    {
+      "term": "Nilai Konversi",
+      "definition": "Suatu nilai yang dihasilkan dari perhitungan Nilai Pembayaran Dimuka dalam satuan mata uang menjadi satuan volume atau energi pemakaian Gas berdasarkan harga Gas yang berlaku, atau sebaliknya.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "Nilai Pembayaran Dimuka",
+      "definition": "Besaran pembayaran di muka yang wajib disediakan oleh Pelanggan dengan memperhatikan ketentuan perhitungan Pemakaian Maksimum Pelanggan dalam Perjalanan.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "NOL/RL",
+      "definition": "Non Objective Letter/ Rejection Letter",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "Nominasi",
+      "definition": "Pemberitahuan mengenai perkiraan jumlah pemakaian Gas yang menunjukkan kebutuhan Gas oleh Pelanggan secara harian kepada PGN untuk diserahkan pada Titik Penyerahan.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "Operation and Maintenance Service Provider",
+      "definition": "Penyedia jasa yang bertanggung jawab secara langsung dalam pelaksanaan kegiatan pengoperasian dan pemeliharaan jaringan dan fasilitas pipa penunjangnya secara handal dan aman.",
+      "reference_code": "PO_O-013/A055",
+      "link_label": "PO_O-013/A055_2022_Perhitungan Taksasi.pdf"
+    },
+    {
+      "term": "Over Usage Penalty",
+      "definition": "Sanksi atas setiap kelebihan pemakaian Gas oleh Pelanggan di atas Pemakaian Maksimum per Bulan",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Overage",
+      "definition": "Program promosi berupa pemberlakuan harga gas khusus bagi Pelanggan Komersial dan Industri yang melakukan penggunaan gas melebihi kuota maksimum yang telah ditetapkan dalam kontrak (baik itu Pemakaian Maksimum per Bulan maupun per Tahun).",
+      "reference_code": "KEPDIR_005304.K/PP.02/COD/2023",
+      "link_label": "KEPDIR_005304_2023_Program Overage untuk Pelanggan Komersial dan Industri.pdf"
+    },
+    {
+      "term": "Passage",
+      "definition": "Program promosi berupa pembebasan atau pemberian diskon (potongan harga) untuk Biaya Penyaluran (Toll Fee) bagi pelanggan yang menggunakan infrastruktur pipa PGN. Program ini dirancang untuk memberikan harga gas yang lebih kompetitif kepada pelanggan di wilayah tertentu atau dengan profil kebutuhan khusus.",
+      "reference_code": "KEPDIR_044800.K/PP.02/COD/2025",
+      "link_label": "K-044800-Keputusan Direksi PT PGN Tbk tentang Program Passage untuk Pelanggan Komersial dan Industri.pdf"
+    },
+    {
+      "term": "PGN Partner",
+      "definition": "Sistem Aplikasi yang terintegrasi dengan sistem Rely On PGN, yang memilikifungsi utama untuk pelaporan penyelesaian pembangunan infrastruktur pendukung penyaluran Gas serta pelaporan aktivitas gas-in.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Pipa Induk",
+      "definition": "Segmen pipa pada sistem jaringan distribusi untuk menyalurkan Gas dari sumber pasokan ataupun stasiun penerima ke pipa servis",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Pipa Instalasi",
+      "definition": "Sistem jaringan pipa untuk menyalurkan Gas mulai dari outlet Meter Gas sampai dengan Gas Train atau regulator peralatan Gas Pelanggan yang sepenuhnya untuk pengoperasian dan pemeliharannya menjadi tanggung jawab Pelanggan.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Pipa Servis",
+      "definition": "Pipa yang dipasang antara pipa induk sampai dengan meter gas.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "PJBG",
+      "definition": "Perjanjian Jual Beli Gas untuk pelanggan KI",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "PO_O-00106.02_2023_ Berlangganan Gas 2023.pdf"
+    },
+    {
+      "term": "PK",
+      "definition": "Pelanggan Kecil adalah segmen Pelanggan yang menggunakan Gas untuk kegiatan yang bersifat jasa dan / atau komersial atau non-komersial dengan rentang pemakaian Gas per Bulan kontrak  adalah sampai dengan 1.000 m3 atau sesuai dengan ketentuan dalam peraturan  Badan Pengatur Hilir Minyak dan Gas yang berlaku.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "PK-1",
+      "definition": "Penggolongan Pelanggan Kecil yang mendapatkan produk GasKita Praktis dengan manfaat ekonomis yang dibedakan berdasarkan sifat kegiatan yang meliputi rumah sakit pemerintah, puskesmas, panti asuhan, tempat ibadah, lembaga pendidikan pemerintah, lembaga keagamaan, kantor pemerintah, lembaga sosial, usaha mikro, dan sejenisnya",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "PK-2",
+      "definition": "Penggolongan Pelanggan Kecil yang mendapatkan produk GasKita Praktis dengan manfaat ekonomis yang dibedakan  berdasarkan sifat kegiatan yang meliputi hotel, restoran/ rumah makan, rumah sakit swasta, perkantoran swasta, lembaga pendidikan swasta, pertokoan/ ruko/ rukan/ pasar/ mall/ swalayan dan kegiatan komersial sejenisnya.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Regional Energy Management",
+      "definition": "Satuan kerja yang mempunyai tugas mengelola dan mengevaluasi kapasitas dan akurasi alat ukur gas dan LNG di titik terima dan titik serah di wilayah regional; mengelola dan mengevaluasi data hasil pengukuran volume dan perhitungan energi penerimaan dan penyerahan gas di wilayah regional; mengelola dan mengevaluasi data hasil analisa kualitas penerimaan dan penyerahan gas dan LNG (GHV) dan penyebaran di wilayah regional; mengelola dan mengevaluasi perhitungan atribusi dan stok gas di jaringan wilayah regional sebagai dasar penagihan gas dan LNG; melakukan koordinasi dengan satuan kerja/fungsi yang terkait dengan pengukuran volume, perhitungan energi, hasil analisis kualitas gas, dan perhitungan atribusi dan stock gas di wilayah regional; melakukan pengendalian UAG; melakukan penyusunan, memonitor, dan mengelola ketentuan kontrak dan SLA, serta pencapaian kerja sama penyediaan data pengukuran dengan Penyedia Jasa di wilayah Regional.",
+      "reference_code": "PO_O-013/A055",
+      "link_label": "PO_O-013/A055_2022_Perhitungan Taksasi.pdf"
+    },
+    {
+      "term": "Rely On PGN",
+      "definition": "Sistem informasi yang membantu proses berlangganan Gas dan layanan untuk Pelanggan Rumah Tangga dan Pelanggan Kecil yang diakses melalui laman relyon.pgn.co.id",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "RT",
+      "definition": "Pelanggan Rumah Tangga yang  menggunakan Gas untuk kebutuhan sendiri dan tidak bersifat komersial dan/atau jasa dengan rentang pemakaian Gas per Bulan Kontrak sampai dengan 50m3 atau sesuai dengan ketentuan dalam peraturan BPH Migas yang berlaku.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "RT-1",
+      "definition": "Penggolongan pelanggan rumah tangga yang mendapatkan produk GasKita Praktis dengan manfaat ekonomis yang memiliki kemampuan daya beli konsumen gas bumi yang meliputi rumah susun, rumah sederhana, rumah sangat sederhana tidak terbatas pada penggunaan listrik daya dengan daya <= 900 VA atau memiliki nilai PBB dengan Nilai Objek Pajak (\"NJOP\") sebagaimana diatur Kementerian atau instansi Pemerintah yang mengatur mengenai batasan nilai rumah sederhana atau menunjukkan dokumen yang menunjukkan bahwa berhak menerima subsidi/ keringanan/bantuan sosial dari Pemerintah (Pusat/ Kabupaten/ Kota).",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "RT-2",
+      "definition": "Penggolongan pelanggan Rumah Tangga yang mendapatkan produk GasKita Praktis dengan manfaat ekonomis yang memiliki kemampuan daya beli konsumen gas bumi yang meliputi rumah menengah, rumah mewah, apartemen, dan sejenisnya.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Slice",
+      "definition": "Program penyesuaian harga gas bagi pelanggan komersial dan industri produk basis kontrak bulanan (sub-produk standar) untuk mengoptimalkan peningkatan pemakaian gas di atas kontrak awal, dengan penerapan harga khusus atas tambahan pemakaian gas tersebut.",
+      "reference_code": "KEPDIR_005305.K/PP.02/COD/2023",
+      "link_label": "KEPDIR_005305_2023_Program Slice untuk Pelanggan Komersial dan Industri_Final.pdf"
+    },
+    {
+      "term": "Spot Gas",
+      "definition": "Spot Gas adalah produk gas tambahan yang diberikan kepada pelanggan untuk memenuhi kebutuhan gas di luar kontrak ketika pemakaian gas melebihi kuota maksimum dalam periode tertentu.",
+      "reference_code": "KEPDIR_011200.K/PP.01.01/COD/2019",
+      "link_label": "KEPDIR_011200_2023_Harga Spot Gas.pdf"
+    },
+    {
+      "term": "Starter Pack",
+      "definition": "Program promosi berupa pemberian harga gas khusus (lebih murah dari harga gas berlaku normal) yang diberikan untuk jangka waktu tertentu kepada Pelanggan Komersial dan Industri yang baru melaksanakan Gas In (pengaliran gas pertama kali).",
+      "reference_code": "KEPDIR_013300.K/PP.03/COD/2023",
+      "link_label": "KEPDIR_013300_2023_Program Starter Pack untuk Pelanggan Komersial dan Industri.pdf"
+    },
+    {
+      "term": "Taksasi",
+      "definition": "Perhitungan pemakaian gas pelanggan dalam kondisi tidak terukur oleh sistem alat ukur.",
+      "reference_code": "PO_O-013/A055",
+      "link_label": "PO_O-013/A055_2022_Perhitungan Taksasi.pdf"
+    },
+    {
+      "term": "UMU",
+      "definition": "Kependekan dari umum, yaitu jnis rekening untuk pendataan calon pelanggan dengan penugasa non-pemerintah.",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    },
+    {
+      "term": "Usage",
+      "definition": "Program promosi berupa pemberian harga Gas tertentu yang lebih kompetitif kepada Pelanggan Komersial dan Industri yang bersedia melakukan peningkatan volume pemakaian Gas di atas rata-rata pemakaian historis atau target tertentu. Berbeda dengan Overage yang fokus pada kelebihan kuota kontrak, Usage lebih bersifat insentif untuk mendorong pertumbuhan konsumsi gas secara keseluruhan.",
+      "reference_code": "KEPDIR_018002.K/PP.02/COD/2023",
+      "link_label": "K-018002-Keputusan Direksi PT PGN Tbk tentang Program Usage untuk Pelanggan Komersial dan Industri.pdf"
+    },
+    {
+      "term": "VRBG",
+      "definition": "Verifikasi Registrasi Berlangganan Gas",
+      "reference_code": "PO_O-001/06.02",
+      "link_label": "Prosedur Operasi Berlangganan Gas Rumah Tangga dan Pelanggan Kecil.pdf"
+    }
+  ]
+}

@@ -6,12 +6,13 @@ use CodeIgniter\Model;
 
 class WorkflowModel extends Model
 {
-    protected $table            = 'workflows';
-    protected $primaryKey       = 'id';
-    protected $returnType       = 'array';
-    protected $useTimestamps    = true;
+    protected $table = 'workflows';
+    protected $primaryKey = 'id';
 
     protected $allowedFields = [
-        'name'
+        'name',
+        'source',
     ];
+
+    protected $useTimestamps = true;
 }

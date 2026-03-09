@@ -4,29 +4,25 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class DocumentTypeSeeder extends Seeder
+class OrganizationSeeder extends Seeder
 {
     public function run()
     {
         $data = [
             [
-                'name' => 'SOP',
+                'name' => 'Ministry of Finance',
                 'created_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Regulation',
+                'name' => 'Ministry of Education',
                 'created_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Guideline',
-                'created_at' => date('Y-m-d H:i:s'),
-            ],
-            [
-                'name' => 'Instruction',
+                'name' => 'National Statistics Agency',
                 'created_at' => date('Y-m-d H:i:s'),
             ],
         ];
 
-        $this->db->table('document_types')->insertBatch($data);
+        $this->db->table('organizations')->insertBatch($data);
     }
 }

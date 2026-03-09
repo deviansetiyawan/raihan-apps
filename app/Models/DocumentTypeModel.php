@@ -6,13 +6,13 @@ use CodeIgniter\Model;
 
 class DocumentTypeModel extends Model
 {
-    protected $table            = 'document_types';
-    protected $primaryKey       = 'id';
-    protected $returnType       = 'array';
-    protected $useTimestamps    = true;
+    protected $table = 'document_types';
+    protected $primaryKey = 'id';
 
     protected $allowedFields = [
         'name',
-        'code'
+        'source',
     ];
+
+    protected $useTimestamps = true;
 }

@@ -6,12 +6,13 @@ use CodeIgniter\Model;
 
 class InstitutionModel extends Model
 {
-    protected $table            = 'institutions';
-    protected $primaryKey       = 'id';
-    protected $returnType       = 'array';
-    protected $useTimestamps    = true;
+    protected $table = 'institutions';
+    protected $primaryKey = 'id';
 
     protected $allowedFields = [
-        'name'
+        'name',
+        'source',
     ];
+
+    protected $useTimestamps = true;
 }
